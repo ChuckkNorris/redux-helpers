@@ -1,13 +1,19 @@
 import {
-  createAsyncReducer,
-  createAction,
-  createAsyncAction,
-  createReducer
+createAction,
+createAsyncAxiosAction,
+createAsyncFetchAction,
+createAsyncReducer,
+createReducer,
+isFailure,
+isSuccess
 } from './build/redux-helpers';
 
 export {
-  createAsyncReducer,
   createAction,
-  createAsyncAction,
-  createReducer
+  createAsyncAxiosAction,
+  createAsyncFetchAction,
+  createAsyncReducer,
+  createReducer,
+  isFailure,
+  isSuccess
 };
