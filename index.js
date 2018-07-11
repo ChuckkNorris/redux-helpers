@@ -6,7 +6,7 @@ createAsyncReducer,
 createReducer,
 isFailure,
 isSuccess
-} from './build/redux-helpers';
+} from './build/async-redux-helpers';
 
 export {
   createAction,

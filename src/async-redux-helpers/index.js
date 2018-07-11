@@ -4,11 +4,11 @@ import {
   createAsyncAxiosAction,
   isSuccess,
   isFailure
-} from './redux-action.helpers';
+} from './async-redux-action.helpers';
 import {
   createReducer,
   createAsyncReducer
-} from './redux-reducer.helpers';
+} from './async-redux-reducer.helpers';
 
 export {
   createAction,
