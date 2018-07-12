@@ -1,4 +1,4 @@
-# Redux Helpers
+# Async Redux Helpers
 Pure functions to simplify the creation of actions, async actions, reducers, and async reducers
 
 Currently supports Fetch/Axios async requests

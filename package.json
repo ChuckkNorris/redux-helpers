@@ -1,8 +1,11 @@
 {
   "name": "async-redux-helpers",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Opinionated helper functions to help reduce the amount of boilerplate code required to write async actions/reducers in redux applications",
   "main": "index.js",
+  "files": [
+    "build/**"
+  ],
   "scripts": {
     "test": "echo 'I don't always contribute to open source, but when I do, I don't write tests'",
     "build": "babel src -d build",
