@@ -31,7 +31,6 @@ const asyncActionBuilder = (
 
 // Creates a basic action
 export const createAction = (type, actionProps = {}) => {
-  if (actionProps )
   return {
     type,
     ...actionProps

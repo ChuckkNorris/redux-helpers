@@ -1,14 +1,14 @@
 {
   "name": "async-redux-helpers",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Opinionated helper functions to help reduce the amount of boilerplate code required to write async actions/reducers in redux applications",
-  "main": "index.js",
+  "main": "build/async-redux-helpers.bundle.js",
   "files": [
     "build/**"
   ],
   "scripts": {
     "test": "echo 'I don't always contribute to open source, but when I do, I don't write tests'",
-    "build": "babel src -d build",
+    "build": "webpack",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -27,14 +27,18 @@
   },
   "homepage": "https://github.com/ChuckkNorris/redux-helpers#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.5",
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "7.1.0",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "eslint": "^5.1.0",
     "eslint-plugin-import": "^2.13.0",
-    "webpack": "^4.15.1"
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
   }
 }
