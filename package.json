@@ -1,6 +1,6 @@
 {
   "name": "async-redux-helpers",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Opinionated helper functions to help reduce the amount of boilerplate code required to write async actions/reducers in redux applications",
   "main": "build/index.js",
   "files": [
