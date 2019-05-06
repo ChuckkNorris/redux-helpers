@@ -1,14 +1,14 @@
 // - - PRIVATE - - //
-const dispatchFetchSuccess = (response, actionType, dispatch) => {
+const dispatchFetchSuccess = (response, actionType, dispatch, actionStartProps) => {
   return response.json().then(data => {
-    dispatch(createAction(`${actionType}_SUCCESS`, { response: data }));
+    dispatch(createAction(`${actionType}_SUCCESS`, { response: data, startParams: actionStartProps }));
   }).catch(error => {
     dispatch(createAction(`${actionType}_ERROR`, error));
   })
 }
 
-const dispatchAxiosSuccess = (response, actionType, dispatch) => {
-  return dispatch(createAction(`${actionType}_SUCCESS`, { response: response.data }));
+const dispatchAxiosSuccess = (response, actionType, dispatch, actionStartProps) => {
+  return dispatch(createAction(`${actionType}_SUCCESS`, { response: response.data, startParams: actionStartProps }));
 }
 
 const asyncActionBuilder = (
@@ -20,9 +20,9 @@ const asyncActionBuilder = (
   return (dispatch) => {
     dispatch(createAction(`${actionType}_START`, actionStartProps));
     return asyncRequestFn().then(response => {
-      onSuccessResponseHandler(response, actionType, dispatch)
+      onSuccessResponseHandler(response, actionType, dispatch, actionStartProps)
     }).catch(error => {
-      dispatch(createAction(`${actionType}_ERROR`, error));
+      dispatch(createAction(`${actionType}_ERROR`, {error, startParams: actionStartProps}));
     });
   }
 }
